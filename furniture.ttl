@@ -1,0 +1,869 @@
+@prefix : <http://www.semanticweb.org/InteriorDesign> .
+@prefix dbc: <http://dbpedia.org/resource/Category:> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix yago: <http://dbpedia.org/class/yago/> .
+@base <http://www.semanticweb.org/InteriorDesign> .
+
+<http://www.semanticweb.org/InteriorDesign> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.org/dc/terms/subject
+
+dct:subject rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/connects
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/connects> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightContain
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightContain> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightHave
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightHave> rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://dbpedia.org/class/yago/Bathrooms
+
+yago:Bathrooms rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Chairs
+
+yago:Chairs rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Chests
+
+yago:Chests rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/ClothingContainers
+
+yago:ClothingContainers rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Containers
+
+yago:Containers rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/CookingAppliances
+
+yago:CookingAppliances rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Couches
+
+yago:Couches rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Desks
+
+yago:Desks rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Hats
+
+yago:Hats rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Seats
+
+yago:Seats rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Stairways
+
+yago:Stairways rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Toilets
+
+yago:Toilets rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/TraditionalChineseObjects
+
+yago:TraditionalChineseObjects rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/Walls
+
+yago:Walls rdf:type owl:Class .
+
+
+
+###  http://dbpedia.org/class/yago/WineAccessories
+
+yago:WineAccessories rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Bathtub
+
+<http://www.semanticweb.org/DesignYourHouse/Bathtub> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Cooking
+
+<http://www.semanticweb.org/DesignYourHouse/Cooking> rdf:type owl:Class ;
+                                                     
+                                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                           owl:someValuesFrom yago:CookingAppliances
+                                                                         ] ;
+                                                     
+                                                     rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Stairs
+
+<http://www.semanticweb.org/DesignYourHouse/Stairs> rdf:type owl:Class ;
+                                                    
+                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                          owl:someValuesFrom yago:Stairways
+                                                                        ] ;
+                                                    
+                                                    rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/BathroomFurniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/BathroomFurniture> rdf:type owl:Class ;
+                                                                               
+                                                                               owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                     owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                                                     owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/Bathtub>
+                                                                                                                   ]
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                                                     owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Shower>
+                                                                                                                   ]
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                                                     owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Toilet>
+                                                                                                                   ]
+                                                                                                                 )
+                                                                                                   ] ;
+                                                                               
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Bed
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Bed> rdf:type owl:Class ;
+                                                                 
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/BedroomFurniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/BedroomFurniture> rdf:type owl:Class ;
+                                                                              
+                                                                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Bed>
+                                                                                                                  ]
+                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Desk>
+                                                                                                                  ]
+                                                                                                                )
+                                                                                                  ] ;
+                                                                              
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Cabinet
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Cabinet> rdf:type owl:Class ;
+                                                                     
+                                                                     owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                           owl:someValuesFrom yago:ClothingContainers
+                                                                                                         ]
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                           owl:someValuesFrom yago:Containers
+                                                                                                         ]
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                           owl:someValuesFrom yago:WineAccessories
+                                                                                                         ]
+                                                                                                       )
+                                                                                         ] ;
+                                                                     
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Chair
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Chair> rdf:type owl:Class ;
+                                                                   
+                                                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                         owl:someValuesFrom yago:Chairs
+                                                                                                       ]
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                         owl:someValuesFrom yago:Seats
+                                                                                                       ]
+                                                                                                     )
+                                                                                       ] ;
+                                                                   
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Couch
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Couch> rdf:type owl:Class ;
+                                                                   
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                         owl:someValuesFrom yago:Couches
+                                                                                       ] ;
+                                                                   
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Desk
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Desk> rdf:type owl:Class ;
+                                                                  
+                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                        owl:someValuesFrom yago:Desks
+                                                                                      ] ;
+                                                                  
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/HallwayFurniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/HallwayFurniture> rdf:type owl:Class ;
+                                                                              
+                                                                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/Stairs>
+                                                                                                                  ]
+                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                    owl:someValuesFrom yago:Walls
+                                                                                                                  ]
+                                                                                                                )
+                                                                                                  ] ;
+                                                                              
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:label "HouseFurniture" .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/KitchenFurniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/KitchenFurniture> rdf:type owl:Class ;
+                                                                              
+                                                                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/Cooking>
+                                                                                                                  ]
+                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightHave> ;
+                                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Table>
+                                                                                                                  ]
+                                                                                                                )
+                                                                                                  ] ;
+                                                                              
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Lamp
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Lamp> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/LivingRoomFurniture
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/LivingRoomFurniture> rdf:type owl:Class ;
+                                                                                 
+                                                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                       owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                       owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Chair>
+                                                                                                                     ]
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                       owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Couch>
+                                                                                                                     ]
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                       owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Lamp>
+                                                                                                                     ]
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                                                                       owl:someValuesFrom <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Television>
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                                     ] ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/House> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Shower
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Shower> rdf:type owl:Class ;
+                                                                    
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                          owl:someValuesFrom yago:Bathrooms
+                                                                                        ] ;
+                                                                    
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Table
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Table> rdf:type owl:Class ;
+                                                                   
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Television
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Television> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Toilet
+
+<http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Toilet> rdf:type owl:Class ;
+                                                                    
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> ;
+                                                                                          owl:someValuesFrom yago:Toilets
+                                                                                        ] ;
+                                                                    
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+###  http://www.semanticweb.org/InteriorDesign/Antique
+
+<http://www.semanticweb.org/InteriorDesign/Antique> rdf:type owl:Class ;
+                                                    
+                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> ;
+                                                                          owl:someValuesFrom yago:Chests
+                                                                        ] ;
+                                                    
+                                                    rdfs:subClassOf <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Furniture> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://dbpedia.org/resource/Bathroom_cabinet
+
+dbr:Bathroom_cabinet rdf:type yago:Bathrooms ,
+                              owl:NamedIndividual ;
+                     
+                     <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> dbr:Bathroom_cabinet ;
+                     
+                     dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Bean_bag
+
+dbr:Bean_bag rdf:type yago:Seats ,
+                      owl:NamedIndividual ;
+             
+             <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Bean_bag ;
+             
+             dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Cassone
+
+dbr:Cassone rdf:type yago:Chests ,
+                     owl:NamedIndividual ;
+            
+            <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Cassone ;
+            
+            dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Cellarette
+
+dbr:Cellarette rdf:type yago:WineAccessories ,
+                        owl:NamedIndividual ;
+               
+               <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Cellarette ;
+               
+               dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Couch
+
+dbr:Couch rdf:type owl:NamedIndividual ;
+          
+          dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Credenza
+
+dbr:Credenza rdf:type owl:NamedIndividual ;
+             
+             dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Faldstool
+
+dbr:Faldstool rdf:type yago:Chairs ,
+                       owl:NamedIndividual ;
+              
+              <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Faldstool ;
+              
+              dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Folding_screen
+
+dbr:Folding_screen rdf:type yago:TraditionalChineseObjects ,
+                            owl:NamedIndividual ;
+                   
+                   owl:sameAs dbr:Room_divider ;
+                   
+                   dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Hatstand
+
+dbr:Hatstand rdf:type yago:Hats ,
+                      owl:NamedIndividual ;
+             
+             dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Metamorphic_library_steps
+
+dbr:Metamorphic_library_steps rdf:type yago:Stairways ,
+                                       owl:NamedIndividual ;
+                              
+                              <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> dbr:Metamorphic_library_steps ;
+                              
+                              dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Modesty_panel
+
+dbr:Modesty_panel rdf:type yago:Desks ,
+                           owl:NamedIndividual ;
+                  
+                  <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Modesty_panel ;
+                  
+                  dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Room_divider
+
+dbr:Room_divider rdf:type yago:Walls ,
+                          owl:NamedIndividual ;
+                 
+                 <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Room_divider ;
+                 
+                 dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Tansu
+
+dbr:Tansu rdf:type yago:ClothingContainers ,
+                   owl:NamedIndividual ;
+          
+          <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Tansu ;
+          
+          dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Toilet_roll_holder
+
+dbr:Toilet_roll_holder rdf:type yago:Toilets ,
+                                owl:NamedIndividual ,
+                                owl:Thing ;
+                       
+                       <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> dbr:Toilet_roll_holder ;
+                       
+                       dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Windsor_chair
+
+dbr:Windsor_chair rdf:type yago:Chairs ,
+                           owl:NamedIndividual ;
+                  
+                  <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> dbr:Windsor_chair ;
+                  
+                  dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Brasero_(heater)
+
+<http://dbpedia.org/resource/Brasero_(heater)> rdf:type yago:CookingAppliances ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://dbpedia.org/resource/Brasero_(heater)> ;
+                                               
+                                               dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Butler's_desk
+
+<http://dbpedia.org/resource/Butler's_desk> rdf:type yago:Desks ,
+                                                     owl:NamedIndividual ;
+                                            
+                                            <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://dbpedia.org/resource/Butler's_desk> ;
+                                            
+                                            dct:subject dbc:Furniture .
+
+
+
+###  http://dbpedia.org/resource/Drawer_(furniture)
+
+<http://dbpedia.org/resource/Drawer_(furniture)> rdf:type yago:Containers ,
+                                                          owl:NamedIndividual ;
+                                                 
+                                                 dct:subject dbc:Furniture ;
+                                                 
+                                                 <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://dbpedia.org/resource/Drawer_(furniture)> .
+
+
+
+###  http://dbpedia.org/resource/Klippan_(sofa)
+
+<http://dbpedia.org/resource/Klippan_(sofa)> rdf:type yago:Couches ,
+                                                      owl:NamedIndividual ;
+                                             
+                                             dct:subject dbc:Furniture ;
+                                             
+                                             <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://dbpedia.org/resource/Klippan_(sofa)> .
+
+
+
+###  http://dbpedia.org/resource/Ottoman_(furniture)
+
+<http://dbpedia.org/resource/Ottoman_(furniture)> rdf:type yago:Couches ,
+                                                           owl:NamedIndividual ;
+                                                  
+                                                  dct:subject dbc:Furniture ;
+                                                  
+                                                  <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://dbpedia.org/resource/Ottoman_(furniture)> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/BathTub
+
+<http://www.semanticweb.org/DesignYourHouse/BathTub> rdf:type <http://www.semanticweb.org/DesignYourHouse/Bathtub> ,
+                                                              owl:NamedIndividual ;
+                                                     
+                                                     <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/BathTub> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Bidet
+
+<http://www.semanticweb.org/DesignYourHouse/Bidet> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Toilet> ,
+                                                            owl:NamedIndividual ;
+                                                   
+                                                   <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/Bidet> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/BigCouch
+
+<http://www.semanticweb.org/DesignYourHouse/BigCouch> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Couch> ,
+                                                               owl:NamedIndividual ;
+                                                      
+                                                      <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/BigCouch> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/CeilingLamp
+
+<http://www.semanticweb.org/DesignYourHouse/CeilingLamp> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Lamp> ,
+                                                                  owl:NamedIndividual ;
+                                                         
+                                                         <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://www.semanticweb.org/DesignYourHouse/CeilingLamp> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Closet
+
+<http://www.semanticweb.org/DesignYourHouse/Closet> rdf:type owl:NamedIndividual ;
+                                                    
+                                                    <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/Closet> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Desk
+
+<http://www.semanticweb.org/DesignYourHouse/Desk> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Desk> ,
+                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/FlatScreenTV
+
+<http://www.semanticweb.org/DesignYourHouse/FlatScreenTV> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Television> ,
+                                                                   owl:NamedIndividual ;
+                                                          
+                                                          <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://www.semanticweb.org/DesignYourHouse/FlatScreenTV> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/FloorLamp
+
+<http://www.semanticweb.org/DesignYourHouse/FloorLamp> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Lamp> ,
+                                                                owl:NamedIndividual ;
+                                                       
+                                                       <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://www.semanticweb.org/DesignYourHouse/FloorLamp> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Hallway
+
+<http://www.semanticweb.org/DesignYourHouse/Hallway> rdf:type owl:NamedIndividual ;
+                                                     
+                                                     <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://www.semanticweb.org/DesignYourHouse/Staircase> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/OnePersonBed
+
+<http://www.semanticweb.org/DesignYourHouse/OnePersonBed> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Bed> ,
+                                                                   owl:NamedIndividual ;
+                                                          
+                                                          <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/OnePersonBed> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Shower
+
+<http://www.semanticweb.org/DesignYourHouse/Shower> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Shower> ,
+                                                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Sink
+
+<http://www.semanticweb.org/DesignYourHouse/Sink> rdf:type <http://www.semanticweb.org/DesignYourHouse/Cooking> ,
+                                                           owl:NamedIndividual ;
+                                                  
+                                                  <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/hasSome> <http://www.semanticweb.org/DesignYourHouse/Sink> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/Staircase
+
+<http://www.semanticweb.org/DesignYourHouse/Staircase> rdf:type <http://www.semanticweb.org/DesignYourHouse/Stairs> ,
+                                                                owl:NamedIndividual ;
+                                                       
+                                                       <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/connects> <http://www.semanticweb.org/DesignYourHouse/Hallway> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/TwoPersonBed
+
+<http://www.semanticweb.org/DesignYourHouse/TwoPersonBed> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Bed> ,
+                                                                   owl:NamedIndividual ;
+                                                          
+                                                          <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/TwoPersonBed> .
+
+
+
+###  http://www.semanticweb.org/DesignYourHouse/WoodenChair
+
+<http://www.semanticweb.org/DesignYourHouse/WoodenChair> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Chair> ,
+                                                                  owl:NamedIndividual ;
+                                                         
+                                                         <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/consistsOf> <http://www.semanticweb.org/DesignYourHouse/WoodenChair> .
+
+
+
+###  http://www.semanticweb.org/InteriorDesign/DiningTable
+
+<http://www.semanticweb.org/InteriorDesign/DiningTable> rdf:type <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/Table> ,
+                                                                 owl:NamedIndividual ;
+                                                        
+                                                        <http://www.semanticweb.org/DesignYourHouse/DesignYourHouse/mightHave> <http://www.semanticweb.org/InteriorDesign/DiningTable> .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/DesignYourHouse/BathTub>
+                        <http://www.semanticweb.org/DesignYourHouse/CeilingLamp>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/DesignYourHouse/CeilingLamp>
+                        <http://www.semanticweb.org/DesignYourHouse/OnePersonBed>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/DesignYourHouse/CeilingLamp>
+                        <http://www.semanticweb.org/DesignYourHouse/FloorLamp>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/DesignYourHouse/CeilingLamp>
+                        <http://www.semanticweb.org/DesignYourHouse/Shower>
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/DesignYourHouse/CeilingLamp>
+                        <http://www.semanticweb.org/DesignYourHouse/TwoPersonBed>
+                      )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
