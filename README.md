@@ -2,7 +2,8 @@
 
 The House Stylist is a web application designed for the course Semantic Web
 
-Run at http://localhost:5000/ while connected to the database Furniture (consists of furniture.ttl and furniture.rdf) in Stardog.
+
+Run at http://localhost:5000/ while connected to the database "furniture" (consists of furniture.ttl and furniture.rdf) in the Stardog Triple Store.
 
 
 The webpage is also available @ http://www.few.vu.nl/~tnn720/
